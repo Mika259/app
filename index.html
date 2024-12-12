@@ -9,6 +9,7 @@
 <body>
     <button onclick="saveData()">Save to LocalStorage</button>
     <button onclick="loadData()">Load from LocalStorage</button>
+    <button onclick="localStorage.clear();alert('Data dipadam!')">delete</button>
     <script>
         function saveData() {
             localStorage.setItem('userData', 'Hello World');
