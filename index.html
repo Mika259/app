@@ -7,7 +7,22 @@
     <title>App</title>
 </head>
 <body>
-    <h1 style="text-align:center;">App still in development.</h1>
-    <script>var nama = prompt("Nama :");alert("Hai "+nama)</script>
+    <button onclick="saveData()">Save to LocalStorage</button>
+    <button onclick="loadData()">Load from LocalStorage</button>
+    <script>
+        function saveData() {
+            localStorage.setItem('userData', 'Hello World');
+            alert('Data saved in LocalStorage');
+        }
+
+        function loadData() {
+            var data = localStorage.getItem('userData');
+            if (data) {
+                alert('Data loaded: ' + data);
+            } else {
+                alert('No data found');
+            }
+        }
+    </script>
 </body>
 </html>
